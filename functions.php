@@ -1,6 +1,6 @@
 <?php
 
-// Função para chamar css e js
+//? Função para chamar css e js
 function load_scripts() {
 
   // wp_enqueue_script() - serve para carregar o js
@@ -23,14 +23,30 @@ function load_scripts() {
 // wp_enqueue_scripts - é um hook que carrega os scripts
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
-// Registrando menus
-// register_nav_menu() - serve para registrar um menu
-// sintaxe:
-// register_nav_menus( array( 'slug' => 'nome-do-menu-dentro-do-wp-admin' ) );
-// https://developer.wordpress.org/reference/functions/register_nav_menus/
-register_nav_menus( 
-  array( 
-    'my_main_menu' => 'Main Menu',
-    'my_footer_menu' => 'Footer Menu'
-  ) 
-);
+//? funções de configuração do tema.
+function wpcurso_config() {
+  // Registrando menus
+  // register_nav_menu() - serve para registrar um menu
+  // sintaxe:
+  // register_nav_menus( array( 'slug' => 'nome-do-menu-dentro-do-wp-admin' ) );
+  // https://developer.wordpress.org/reference/functions/register_nav_menus/
+  register_nav_menus( 
+    array( 
+      'my_main_menu' => 'Main Menu',
+      'my_footer_menu' => 'Footer Menu'
+    ) 
+  );
+
+  //https://developer.wordpress.org/reference/functions/add_theme_support/
+  // add_theme_support() - Registra o suporte a temas para um determinado recurso.
+  // add_theme_support( 'funcionalidade', array( 'argumentos' ) );
+  $args = array(
+    'height' => 225,
+    'width' => 1920,
+  );
+  add_theme_support('custom-header', $args); // cabeçalho customizável
+}
+
+// after_setup_theme - é um hook que dispara depois que o tema é carregado.
+// add_action('hook', 'função', prioridade);
+add_action( 'after_setup_theme', 'wpcurso_config', 0 );
