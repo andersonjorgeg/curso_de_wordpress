@@ -1,2 +1,27 @@
-.social-media-icons {background: green; height: 30px;}
-.search {background: yellow; height: 30px;}
+a {
+  text-decoration: none;
+}
+
+.social-media-icons {
+  background: green; 
+  height: 30px;
+}
+
+
+.search {
+  background: yellow; 
+  height: 30px;
+}
+
+
+.main-menu ul, 
+.footer-menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.main-menu ul li a, 
+.footer-menu ul li a {
+  text-decoration: none;
+}
