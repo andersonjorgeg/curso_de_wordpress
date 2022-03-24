@@ -10,7 +10,13 @@ Template Name: General Template
 
 <!-- get_header(); - serve para chamar o header.php do tema -->
 <?php get_header(); ?>
-
+<img
+  class="img-fluid"
+  src="<?php header_image(); ?>"
+  height="<?php echo get_custom_header()->height; ?>"
+  width="<?php echo get_custom_header()->width; ?>"
+  alt=""
+/>
   <div class="content-area">
     <main>
       <section class="meddle-area">

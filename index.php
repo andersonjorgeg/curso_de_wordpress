@@ -1,6 +1,14 @@
 <!-- get_header(); - serve para chamar o header.php do tema -->
 <?php get_header(); ?>
-
+<!-- header_image(); - Exibe o URL da imagem do cabeçalho. -->
+<!-- get_custom_header(); - Obtém os dados da imagem do cabeçalho. -->
+<img 
+  class="img-fluid"
+  src="<?php header_image(); ?>" 
+  height="<?php echo get_custom_header()->height; ?>"
+  width="<?php echo get_custom_header()->width; ?>"
+  alt=""
+/>  
   <div class="content-area">
     <main>
       <section class="slide">
@@ -29,6 +37,7 @@
                 <article>
                   <!-- the_title() - Exiba ou recupere o título da postagem atual com marcação opcional. -->
                   <h2><?php the_title(); ?></h2>
+                  
                   <p>
                     <!-- get_the_date() - Recupere a data em que o post foi escrito. -->
                     Published in <?php echo get_the_date();?> 
