@@ -1,29 +1,77 @@
-a {
-  text-decoration: none;
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+
+body{ font: 16px/1.6 'Oswald', sans-serif;  }
+body p{ font: 16px/1.6 'Lato', sans-serif; }
+h1{ font-size: 28px; margin: 15px 0 15px; }
+h2{ font-size: 24px; margin-top: 0; }
+h3{ font-size: 20px; margin-top: 0; }
+h4{ font-size: 18px; margin-top: 0; }
+
+
+/* Top Bar Section */
+.top-bar {
+  background-color: #b9121b;
+  color: #fff;
+  padding: 15px 0;
 }
 
-.social-media-icons {
-  background: green; 
-  height: 30px;
+
+/* Header - Main Menu */
+.menu-area {
+  background-color: #f3f3f3;
+  padding: 15px 0;
 }
 
-
-.search {
-  background: yellow; 
-  height: 30px;
-}
-
-
-.main-menu ul, 
-.footer-menu ul {
+.main-menu ul {
   display: flex;
   list-style: none;
   justify-content: flex-end;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 0;
   gap: 10px;
 }
-.main-menu ul li a, 
-.footer-menu ul li a {
+
+.main-menu ul li a {
   text-decoration: none;
+  color: #4c1b1b;
+}
+
+.main-menu ul li.current-menu-item a {
+  color: #e58888;
+}
+
+/* slider */
+.slide {
+  padding: 25px 0;
+}
+
+
+/* services */
+.services {
+  background-color: #4c1b1b;
+  padding: 25px 0;
+  color: #fefefe;
+}
+
+
+/* meddle-area */
+.meddle-area {
+  padding: 25px 0;
+}
+.middle-area h1 {
+  color: #4c1b1b;
+  text-transform: uppercase;
+}
+
+
+/* Middle Area - Sidebar */
+.sidebar { 
+  background: #f6e497; 
+  padding: 20px; 
+  margin: 0 0 30px;  
 }
 
 
