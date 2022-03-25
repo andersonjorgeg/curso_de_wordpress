@@ -44,12 +44,17 @@ function wpcurso_config() {
     'height' => 225,
     'width' => 1920,
   );
+  //* suporte a imagens de cabeçalho
   // custom-header - serve para registrar um cabeçalho personalizado
   add_theme_support('custom-header', $args); // cabeçalho customizável
 
-  //suporte a miniaturas
+  //* suporte a miniaturas
   // post-thumbnails - adiciona suporte a miniaturas para posts
   add_theme_support('post-thumbnails');
+
+  //* suporte formatos de posts
+  // post-formats - adiciona suporte a formatos de posts
+  add_theme_support('post-formats' , array( 'video', 'image' ) );
 }
 
 // after_setup_theme - é um hook que dispara depois que o tema é carregado.

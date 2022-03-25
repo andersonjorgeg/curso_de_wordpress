@@ -33,24 +33,11 @@
                   // the_post() - Itere o índice de postagem no loop. 
                   while( have_posts() ): the_post();
                 ?>
-                <!-- mostrando os posts do loop -->
-                <article>
-                  <!-- the_title() - Exiba ou recupere o título da postagem atual com marcação opcional. -->
-                  <h2><?php the_title(); ?></h2>
-                  
-                  <p>
-                    <!-- get_the_date() - Recupere a data em que o post foi escrito. -->
-                    Published in <?php echo get_the_date();?> 
-                    <!-- get_the_author() - Exibe um link HTML para a página do autor da postagem atual. -->
-                  by <?php the_author_posts_link(); ?>
-                  </p>
-                  <!-- the_category() - Exibe a lista de categorias para uma postagem em lista HTML ou formato personalizado. -->
-                  <p>Categories: <?php the_category( ' ' ); ?> </p>
-                  <!-- the_tags() - Exibe as tags de uma postagem. -->
-                  <p><?php the_tags( 'Tags: ', ', ' ); ?></p>
-                  <!-- the_content() - Exiba o conteúdo da postagem. -->
-                  <?php the_content() ?>
-                </article>
+                <!--//? mostrando os posts do loop -->
+                <!-- // get_template_part - Carrega uma peça de modelo em um modelo. -->
+                <!-- // get_template_part( 'caminho sem .php' ); -->
+                <!-- // get_post_format() - Retorna o formato de postagem atual. -->
+                <?php get_template_part( 'template-parts/content', get_post_format()); ?>
 
                 <?php
                   endwhile;
