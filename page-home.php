@@ -16,7 +16,9 @@
       <section class="meddle-area">
         <div class="container">
           <div class="row">
-            <aside class="sidebar col-md-4">Barra Lateral</aside>
+            <!-- get_sidebar() - Carregar modelo de barra lateral. -->
+            <!-- get_sidebar( 'name' ); -->
+            <?php get_sidebar( 'home' ); ?>
             <div class="news col-md-8">
               <!-- criando loop wordpress -->
               <?php 

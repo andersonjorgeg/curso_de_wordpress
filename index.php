@@ -11,20 +11,9 @@
 />  
   <div class="content-area">
     <main>
-      <section class="slide">
-        <div class="container">
-          <div class="row">Slide</div>
-        </div>
-      </section>
-      <section class="services">
-        <div class="container">
-          <div class="row">Serviços</div>
-        </div>
-      </section>
       <section class="meddle-area">
         <div class="container">
           <div class="row">
-            <aside class="sidebar col-md-4">Barra Lateral</aside>
             <div class="news col-md-8">
               <!-- criando loop wordpress -->
               <?php 
@@ -49,12 +38,8 @@
               <?php endif; ?>
               <!-- fim do loop wordpress -->
             </div>
+            <?php get_sidebar( 'blog' ); ?>
           </div>
-        </div>
-      </section>
-      <section class="map">
-        <div class="container">
-          <div class="row">Mapa</div>
         </div>
       </section>
     </main>

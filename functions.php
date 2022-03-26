@@ -60,3 +60,39 @@ function wpcurso_config() {
 // after_setup_theme - é um hook que dispara depois que o tema é carregado.
 // add_action('hook', 'função', prioridade);
 add_action( 'after_setup_theme', 'wpcurso_config', 0 );
+
+// widgets_init - é um hook que dispara depois que todos os widgets padrão do WordPress foram registrados.
+// add_action('hook', 'função');
+add_action( 'widgets_init', 'wpcurso_sidebars' );
+
+function wpcurso_sidebars() {
+  // Registrando siderbar
+  // register_sidebar() - Cria a definição para uma única barra lateral e retorna o ID.
+  // sintaxe:
+  // register_sidebar( array( args ) );
+  // sidebar da página Home
+  register_sidebar( 
+    array ( 
+      'name' => 'Home Page Sidebar', // name - nome da sidebar
+      'id' => 'sidebar-1', // id - id da sidebar (deve ser único)
+      'description' => 'Sidebar to be used Home Page', // description - descrição da sidebar
+      'before_widget' => '<div class="widget-wrapper">', // before_widget - HTML antes do widget
+      'after_widget' => '</div>', // after_widget - HTML depois do widget
+      'before_title' => '<h2 class="widget-title">', // before_title - HTML antes do título do widget
+      'after_title' => '</h2>', // after_title - HTML depois do título do widget
+    )
+   );
+
+  // sidebar da página Blog
+   register_sidebar( 
+    array ( 
+      'name' => 'Blog Sidebar',
+      'id' => 'sidebar-2', 
+      'description' => 'Sidebar to be used Blog Page', 
+      'before_widget' => '<div class="widget-wrapper">', 
+      'after_widget' => '</div>', 
+      'before_title' => '<h2 class="widget-title">', 
+      'after_title' => '</h2>', 
+    )
+   );
+}
