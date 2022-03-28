@@ -17,13 +17,11 @@ h4{ font-size: 18px; margin-top: 0; }
   padding: 15px 0;
 }
 
-
 /* Header - Main Menu */
 .menu-area {
   background-color: #f3f3f3;
   padding: 15px 0;
 }
-
 .main-menu ul {
   display: flex;
   list-style: none;
@@ -33,27 +31,53 @@ h4{ font-size: 18px; margin-top: 0; }
   margin: 0;
   gap: 10px;
 }
-
 .main-menu ul li a {
   text-decoration: none;
   color: #4c1b1b;
 }
-
 .main-menu ul li.current-menu-item a {
   color: #e58888;
 }
 
 /* slider */
-.slide {
-  padding: 25px 0;
+.wppsac-post-slider.design-2 .wppsac-post-image-bg {
+  min-height: 500px;
 }
-
+.wppsac-post-slider.design-2 .wppsac-post-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* services */
 .services {
   background-color: #4c1b1b;
   padding: 25px 0;
   color: #fefefe;
+}
+.services h1{ 
+  text-align: center; 
+  color: #fcfae1; 
+  text-transform: uppercase; 
+  font-size: 28px; 
+}
+.services .widget-wrapper{ 
+  text-align: center; 
+}
+.services .widget-wrapper h2{ 
+  text-transform: uppercase; 
+  font-size: 1.2em; 
+  color: #f6e497; 
+  font-weight: 200; 
+}
+.services .widget-wrapper:first-child{ 
+  padding: 15px 0; 
+}
+.services .widget-wrapper figure{ 
+  margin: 0; 
+}
+.services .widget-wrapper img{ 
+  border: 10px solid #FFF; 
 }
 
 
@@ -66,7 +90,6 @@ h4{ font-size: 18px; margin-top: 0; }
   text-transform: uppercase;
 }
 
-
 /* Middle Area - Sidebar */
 .sidebar { 
   background: #f6e497; 
@@ -74,10 +97,34 @@ h4{ font-size: 18px; margin-top: 0; }
   margin: 0 0 30px;  
 }
 
+/* middle Area - Featured */
+.featured .meta-info, 
+.secondary .meta-info {
+  margin-top: 10px;
+}
+.featured .meta-info p,
+.secondary .meta-info p { 
+  line-height: 1em; 
+  font-weight: bold; 
+}
+.featured .meta-info p a, 
+.secondary .meta-info p a { 
+  color: #9d9d9d; 
+  font-weight: normal; 
+}
+.featured .meta-info p span,
+.secondary .meta-info p span { 
+  margin-right: 5px; 
+}
+.featured a,
+.secondary a { 
+  color: #000; 
+  font-weight: normal;
+  text-decoration: none;
+}
 
 /* Footer */
 footer{ background: #000; padding: 15px 0; color: #fcfae1; }
-
 
 /* Footer - Footer Menu */
 .footer-menu ul {
@@ -90,19 +137,16 @@ footer{ background: #000; padding: 15px 0; color: #fcfae1; }
   padding: auto;
   gap: 10px;
 }
-
 .footer-menu ul li a{ 
   color: #fcfae1;  
   text-decoration: none;
 }
-
 .footer-menu ul  li.current-menu-item a{ 
   color:#e58888;
 }
 
-
 /* Blog */
-.wp-post-image{ 
+.blog .wp-post-image{ 
   float: left; 
   margin: 0 15px 10px 0; 
 }
