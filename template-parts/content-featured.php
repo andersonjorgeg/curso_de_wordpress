@@ -1,9 +1,14 @@
 
 <article <?php post_class( array( 'class' => 'featured'))?>>
-  <h2><?php the_title(); ?></h2>
   <div class="thumbnail">
-    <?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
+    <!-- the_permalink() - Mostra o link do post. -->
+    <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail( 'large', array( 'class' => 'img-fluid' ) ); ?>
+    </a>
   </div>
+  <a href="<?php the_permalink(); ?>">
+    <h2><?php the_title(); ?></h2>
+  </a>
   <div class="meta-info">
     <p>
       by <span><?php the_author_posts_link(); ?></span>
@@ -13,6 +18,5 @@
     <p><span><?php echo get_the_date() ?></span></p>
   </div>
   <!-- the_excerpt() - Mostra o resumo do post. -->
-  <!-- the_permalink() - Mostra o link do post. -->
-  <a href="<?php the_permalink(); ?>" class=""><?php the_excerpt(); ?></a>
+  <?php the_excerpt(); ?>
 </article>

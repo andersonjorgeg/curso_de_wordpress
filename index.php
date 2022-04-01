@@ -23,7 +23,7 @@
                   while( have_posts() ): the_post();
                 ?>
                 <!--//? mostrando os posts do loop -->
-                <!-- // get_template_part - Carrega uma peça de modelo em um modelo. -->
+                <!-- // get_template_part() - Carrega uma peça de modelo em um modelo. -->
                 <!-- // get_template_part( 'caminho sem .php' ); -->
                 <!-- // get_post_format() - Retorna o formato de postagem atual. -->
                 <?php get_template_part( 'template-parts/content', get_post_format()); ?>

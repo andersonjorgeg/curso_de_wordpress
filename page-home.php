@@ -4,8 +4,8 @@
   <div class="content-area">
     <main>
       <section class="slide">
-        <!-- do_shortcode - Executa um código de shortcode. -->
-       <?php echo do_shortcode( '[recent_post_slider design="design-2" limit="5"]' ) ?>
+        <!-- do_shortcode() - Executa um código de shortcode. -->
+       <?php echo do_shortcode( '[recent_post_slider design="design-2" limit="5" category="12"]' ) ?>
       </section>
       <section class="services">
         <div class="container">
@@ -102,9 +102,7 @@
         </div>
       </section>
       <section class="map">
-        <div class="container">
-          <div class="row">Mapa</div>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.743736575156!2d-43.762134599999996!3d-22.869588899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bf85fddabb273%3A0xe6d95ed3de1c03a!2sHotel%20Europa%20de%20Itaguai%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1648596005699!5m2!1spt-BR!2sbr&zoom=15" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
   </div>
