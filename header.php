@@ -21,7 +21,12 @@
               }
             ?>
           </div>
-          <div class="search col-xl-3 col-sm-5 col-6 text-end">Pesquisa</div>
+          <div class="search col-xl-3 col-sm-5 col-6 text-end">
+            <?php
+              // get_search_form() -> Exibir formulário de pesquisa.
+              get_search_form();
+            ?>
+          </div>
         </div>
       </div>
     </section>

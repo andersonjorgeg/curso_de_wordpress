@@ -30,6 +30,20 @@
 
                 <?php
                   endwhile;
+                  ?>
+                  <!-- // paginação -->
+                  <div class="row">
+                    <div class="pages text-start col-6">
+                      <!-- previous_posts_link() - Exibe um link para a página anterior. -->
+                      <?php previous_posts_link('<< Newer Posts'); ?>
+                    </div>
+                    <div class="pages text-end col-6">
+                      <!-- next_posts_link() - Exibe um link para a próxima página. -->
+                      <?php next_posts_link('Older Posts >>'); ?>
+                    </div>
+                  </div>
+
+                  <?php
                 // se não hover posts
                 else:
 
@@ -38,7 +52,7 @@
               <?php endif; ?>
               <!-- fim do loop wordpress -->
             </div>
-            <?php get_sidebar( 'blog' ); ?>
+            <?php get_sidebar( 'blog' );?>
           </div>
         </div>
       </section>
