@@ -197,3 +197,13 @@ footer{ background: #000; padding: 15px 0; color: #fcfae1; }
 .footer-menu ul  li.current-menu-item a{ 
   color:#e58888;
 }
+
+.archive-title,
+.tag-title, 
+.category-title,
+.date-title {
+  font-size: 28px;
+  color: #4c1b1b;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
