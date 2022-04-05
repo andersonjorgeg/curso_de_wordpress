@@ -55,6 +55,10 @@ function wpcurso_config() {
   //* suporte formatos de posts
   // post-formats - adiciona suporte a formatos de posts
   add_theme_support('post-formats' , array( 'video', 'image' ) );
+
+  //* suporte a titulo de página
+  // title-tag - adiciona suporte ao title-tag
+  add_theme_support('title-tag');
 }
 
 // after_setup_theme - é um hook que dispara depois que o tema é carregado.
