@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso Wordpress</title>
+  <!-- wp_title() -> Exiba ou recupere o título da página para todas as áreas do blog. -->
+  <title><?php wp_title()?></title>
   <!-- wp_head() - serve para carregar os scripts do tema -->
   <?php wp_head(); ?>
 </head>
