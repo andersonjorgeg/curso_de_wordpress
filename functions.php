@@ -1,5 +1,9 @@
 <?php
 
+// require -> inclui o arquivo e executa o código
+// get_template_directory() -> retorna o caminho do diretório do tema
+require get_template_directory() . '/inc/customizer.php';
+
 //? Função para chamar css e js
 function load_scripts() {
 
