@@ -34,12 +34,20 @@
     <section class="menu-area">
       <div class="container">
         <div class="row">
-          <section class="logo col-md-2 col-12 text-center">Logo</section>
-          <nav class="main-menu col-md-10 text-end">
-            <!-- wp_nav_menu() - serve para carregar o menu -->
-            <!-- https://developer.wordpress.org/reference/functions/wp_nav_menu/ -->
-            <?php wp_nav_menu( array( 'theme_location' => 'my_main_menu' ) ); ?>
-          </nav>
+          <div class="align">
+            <section class="logo col-md-2 col-12 text-center">
+              <!-- logo -->
+              <?php
+                // the_custom_logo() -> Exibe a logo personalizada.
+                the_custom_logo();
+              ?>
+            </section>
+            <nav class="main-menu col-md-10 text-end">
+              <!-- wp_nav_menu() - serve para carregar o menu -->
+              <!-- https://developer.wordpress.org/reference/functions/wp_nav_menu/ -->
+              <?php wp_nav_menu( array( 'theme_location' => 'my_main_menu' ) ); ?>
+            </nav>
+          </div>
         </div>
       </div>
     </section>

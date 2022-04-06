@@ -63,6 +63,10 @@ function wpcurso_config() {
   //* suporte a titulo de página
   // title-tag - adiciona suporte ao title-tag
   add_theme_support('title-tag');
+
+  //* suporte a logo personalizada
+  // custom-logo - adiciona suporte a logo personalizada
+  add_theme_support('custom-logo', array( 'height' => 110, 'width' => 200 ));
 }
 
 // after_setup_theme - é um hook que dispara depois que o tema é carregado.

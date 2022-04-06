@@ -27,6 +27,9 @@ h4{ font-size: 18px; margin-top: 0; }
 .search label{ margin: 0; }
 .search > form .screen-reader-text, .search-form .screen-reader-text { clip: unset; clip-path: unset; position: relative !important; }
 
+/* Align */
+.align { display: flex; align-items: center; width: 100%; }
+
 /* Header - Main Menu */
 .menu-area{ background: #f3f3f3; padding: 15px 0; }
 .main-menu ul{ list-style: none; padding: 0; margin: 0; font-size: 28px; }
