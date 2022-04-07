@@ -1,7 +1,7 @@
 <?php 
 // WP_Customizer_Manager - Personalize a classe Manager.
 function wpcurso_customizer( $wp_customize ) {
-  // criando a seção do copyright
+  //? copyright
   // $wp_customize - instância do objeto WP_Customize_Manager
   // add_section() - metodo para adicionar uma seção
   $wp_customize->add_section(
@@ -29,6 +29,32 @@ function wpcurso_customizer( $wp_customize ) {
       'label' => 'Copyright', // label do controle
       'description' => 'Choose whether to show the Services section or not.', // descrição do controle
       'section' => 'sec_copyright', // seção do controle
+      'type' => 'text', // tipo do campo
+    )
+  );
+
+  //? map
+  $wp_customize->add_section(
+    'sec_map', // id da seção
+    array(
+      'title' => 'Map', // título da seção
+      'description' => 'Map section', // descrição da seção
+    )
+  );
+  $wp_customize->add_setting(
+    'set_map_address', // id da configuração
+    array(
+      'type' => 'theme_mod', // tipo do controle
+      'default' => '', // valor padrão
+      /* 'sanitize_callback' => 'esc_url_raw', // escapar url */
+    )
+  );
+  $wp_customize->add_control(
+    'set_map_address', // o id é o mesmo da configuração
+    array(
+      'label' => 'Type your address here', // label do controle
+      'description' => 'No special characters allowed', // descrição do controle
+      'section' => 'sec_map', // seção do controle
       'type' => 'text', // tipo do campo
     )
   );
