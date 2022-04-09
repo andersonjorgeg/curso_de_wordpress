@@ -7,8 +7,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_section(
     'sec_copyright', // id da seção
     array(
-      'title' => 'Copyright', // título da seção
-      'description' => 'Copyright section', // descrição da seção
+      'title' => __('Copyright', 'wpcurso'), // título da seção
+      'description' => __('Copyright section', 'wpcurso'),// descrição da seção
     )
   );
   // criando a configuração do copyright
@@ -17,7 +17,7 @@ function wpcurso_customizer( $wp_customize ) {
     'set_copyright', // id da configuração
     array(
       'type' => 'theme_mod', // tipo do controle
-      'default' => 'Copyright x, all rights reserved.', // valor padrão
+      'default' => __('Copyright x, all rights reserved.', 'wpcurso'), // valor padrão
       'sanitize_callback' => 'wp_filter_nohtml_kses', // remover tags html
     )
   );
@@ -26,8 +26,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'set_copyright', // o id é o mesmo da configuração
     array(
-      'label' => 'Copyright', // label do controle
-      'description' => 'Choose whether to show the Services section or not.', // descrição do controle
+      'label' => __('Copyright', 'wpcurso'), // label do controle
+      'description' => __('Choose whether to show the Services section or not.', 'wpcurso'), // descrição do controle
       'section' => 'sec_copyright', // seção do controle
       'type' => 'text', // tipo do campo
     )
@@ -37,8 +37,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_section(
     'sec_map', 
     array(
-      'title' => 'Map', 
-      'description' => 'Map section', 
+      'title' => __('Map', 'wpcurso'), 
+      'description' => __('Map section', 'wpcurso'), 
     )
   );
   $wp_customize->add_setting(
@@ -52,8 +52,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'set_map_address', 
     array(
-      'label' => 'Type your address here', 
-      'description' => 'enter the url of the address without the html tags of the map', 
+      'label' => __('Type your address here', 'wpcurso'),
+      'description' => __('enter the url of the address without the html tags of the map', 'wpcurso'),
       'section' => 'sec_map', 
       'type' => 'text', 
     )
@@ -63,8 +63,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_section(
     'sec_slider', 
     array(
-      'title' => 'Slider', 
-      'description' => 'Slider section', 
+      'title' => __('Slider', 'wpcurso'), 
+      'description' => __('Slider section', 'wpcurso'), 
     )
   );
 
@@ -80,15 +80,15 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'set_slider_option', 
     array(
-      'label' => 'Choose your design type here', 
-      'description' => 'Choose your design type', 
+      'label' => __('Choose your design type here', 'wpcurso'), 
+      'description' => __('Choose your design type', 'wpcurso'),
       'section' => 'sec_slider', 
       'type' => 'select', 
       'choices' => array(
-        '1' => 'Design Type 1', 
-        '2' => 'Design Type 2',
-        '3' => 'Design Type 3',
-        '4' => 'Design Type 4',
+        '1' => __('Design Type 1', 'wpcurso'), 
+        '2' => __('Design Type 2', 'wpcurso'),
+        '3' => __('Design Type 3', 'wpcurso'),
+        '4' => __('Design Type 4', 'wpcurso'),
         
       )
     )
@@ -106,8 +106,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'set_slider_limit', 
     array(
-      'label' => 'Number of posts to display', 
-      'description' => 'Choose the number of posts to be displayed', 
+      'label' => __('Number of posts to display', 'wpcurso'), 
+      'description' => __('Choose the number of posts to be displayed', 'wpcurso'), 
       'section' => 'sec_slider', 
       'type' => 'number', 
     )
@@ -117,8 +117,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_section(
     'sec_loops', 
     array(
-      'title' => 'Front Page Loops', 
-      'description' => 'Controls the loops in front page', 
+      'title' => __('Front Page Loops', 'wpcurso'), 
+      'description' => __('Controls the loops in front page', 'wpcurso'),
     )
   );
 
@@ -133,8 +133,8 @@ function wpcurso_customizer( $wp_customize ) {
   $wp_customize->add_control(
     'set_loop1_categories',
     array(
-      'label' => 'Choose the category for the first loop',
-      'description' => 'Choose the categories to include in the first loop. Use commas to separate the categories. For example 4,5,8,20',
+      'label' => __('Choose the category for the first loop', 'wpcurso'),
+      'description' => __('Choose the categories to include in the first loop. Use commas to separate the categories. For example 4,5,8,20', 'wpcurso'),
       'section' => 'sec_loops',
       'type' => 'type',
     )
@@ -149,8 +149,8 @@ function wpcurso_customizer( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'set_loop2_posts_per_page', array(
-			'label' => 'Number of posts to display in second loop',
-			'description' => 'Choose the number of posts to display in second loop',
+			'label' => __('Number of posts to display in second loop', 'wpcurso'),
+			'description' => __('Choose the number of posts to display in second loop', 'wpcurso'),
 			'section' => 'sec_loops',
 			'type' => 'number'
 		)
@@ -165,8 +165,8 @@ function wpcurso_customizer( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'set_loop2_categories_to_exclude', array(
-			'label' => 'Categories to exclude in second loop',
-			'description' => 'Choose the categories to exclude in the second loop. Use commas to separate the categories. For example 4,5,8,20',
+			'label' => __('Categories to exclude in second loop', 'wpcurso'),
+			'description' => __('Choose the categories to exclude in the second loop. Use commas to separate the categories. For example 4,5,8,20', 'wpcurso'),
 			'section' => 'sec_loops',
 			'type' => 'text'
 		)
@@ -181,8 +181,8 @@ function wpcurso_customizer( $wp_customize ) {
 	);
 	$wp_customize->add_control(
 		'set_loop2_categories_to_include', array(
-			'label' => 'Categories to include in second loop',
-			'description' => 'Choose the categories to include in the second loop. Use commas to separate the categories. For example 4,5,8,20',
+			'label' => __('Categories to include in second loop', 'wpcurso'),
+			'description' => __('Choose the categories to include in the second loop. Use commas to separate the categories. For example 4,5,8,20', 'wpcurso'),
 			'section' => 'sec_loops',
 			'type' => 'text'
 		)

@@ -7,10 +7,10 @@
   </a>
   <div class="meta-info">
     <p>
-      Published in <?php echo get_the_date(); ?>
+      <?php _e('Published in', 'wpcurso'); ?> <?php echo get_the_date(); ?>
     </p>
-    <p>Categories: <?php the_category(' '); ?> </p>
-    <p><?php the_tags('Tags: ', ', '); ?></p>
+    <p><?php _e('Categories:', 'wpcurso'); ?> <?php the_category(' '); ?> </p>
+    <p><?php the_tags( __('Tags: ', 'wpcurso'), ', '); ?></p>
   </div>
   <?php the_content() ?>
 </article>

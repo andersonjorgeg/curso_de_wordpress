@@ -19,10 +19,10 @@
               ?>
               <div class="row">
                 <div class="pages text-start col-6">
-                  <?php previous_posts_link('<< Newer Posts'); ?>
+                  <?php previous_posts_link( __('<< Newer Posts', 'wpcurso') ); ?>
                 </div>
                 <div class="pages text-end col-6">
-                  <?php next_posts_link('Older Posts >>'); ?>
+                  <?php next_posts_link( __('Older Posts >>', 'wpcurso'), ); ?>
                 </div>
               </div>
 
@@ -30,7 +30,9 @@
             else :
 
             ?>
-              <p>There's nothing yet to be displayed...</p>
+              <p>
+                <?php _e('There&rsquo;s nothing yet to be displayed...',  'wpcurso'); ?>
+              </p>
             <?php endif; ?>
           </div>
           <?php get_sidebar('blog'); ?>

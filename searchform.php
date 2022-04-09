@@ -28,7 +28,7 @@ $twentytwentyone_aria_label = ! empty( $args['aria_label'] ) ? 'aria-label="' . 
   <!-- get_search_query() -> Recupera o conteúdo da variável de consulta do WordPress de pesquisa. -->
 	<input type="search" id="<?php echo esc_attr( $twentytwentyone_unique_id ); ?>" class="search-field" value="<?php echo get_search_query(); ?>" name="s" />
   <!-- esc_attr_x() -> Traduza a string com o contexto gettext e o escape para uso seguro em um atributo. -->
-	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Ok', 'submit button', 'twentytwentyone' ); ?>" />
+	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Ok', 'submit button', 'wpcurso' ); ?>" />
 </form>
 
 <script>

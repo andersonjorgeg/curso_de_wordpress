@@ -44,7 +44,9 @@ Template Name: General Template
               else:
 
             ?>
-              <p>There's nothing yet to be displayed...</p>
+              <p>
+                <?php _e('There&rsquo;s nothing yet to be displayed...',  'wpcurso'); ?>
+              </p>
             <?php endif; ?>
             <!-- fim do loop wordpress -->
           </div>

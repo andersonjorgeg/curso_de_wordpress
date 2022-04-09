@@ -7,10 +7,10 @@
       <?php the_post_thumbnail(array(275, 275)); ?>
     </a>
     <p>
-      Published in <?php echo get_the_date(); ?>
-      by <?php the_author_posts_link(); ?>
+    <?php _e('Published in', 'wpcurso'); ?> <?php echo get_the_date(); ?>
+    <?php _e('by', 'wpcurso'); ?> <?php the_author_posts_link(); ?>
     </p>
-    <p><?php the_tags('Tags: ', ', '); ?></p>
+    <p><?php the_tags( __('Tags: ', 'wpcurso'), ', '); ?></p>
   </div>
   <?php the_excerpt() ?>
 </article>
