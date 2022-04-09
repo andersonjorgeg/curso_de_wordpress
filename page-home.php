@@ -5,7 +5,11 @@
   <main>
     <section class="slide">
       <!-- do_shortcode() - Executa um código de shortcode. -->
-      <?php echo do_shortcode('[recent_post_slider design="design-2" limit="5" category="12"]') ?>
+      <?php
+      $design = get_theme_mod('set_slider_option');
+      $limit = get_theme_mod('set_slider_limit');
+      echo do_shortcode('[recent_post_slider design="design-' . $design . '" limit="' . $limit . '" category="12"]');
+      ?>
     </section>
     <section class="services">
       <div class="container">
@@ -55,9 +59,11 @@
                 <!-- loop para mostra o último post  -->
                 <!-- WP_Query - Classe para buscar posts no banco de dados. -->
                 <?php
+                $loop1cats = get_theme_mod('set_loop1_categories');
+
                 $featured = new WP_Query(
                   // query string - serve para filtrar os posts
-                  'post_type=post&posts_per_page=1&cat=12,6'
+                  'post_type=post&posts_per_page=1&cat=' . $loop1cats
                 );
 
                 if ($featured->have_posts()) :
@@ -74,12 +80,18 @@
                   wp_reset_postdata();
                 endif;
 
+                $per_page = get_theme_mod( 'set_loop2_posts_per_page' );
+                // explode - divide uma string em um array
+                // explode(' separador ', string)
+                $loop2_cat_exclude = explode(',', get_theme_mod('set_loop2_categories_to_exclude'));
+                $loop2_cat_include = explode(',', get_theme_mod('set_loop2_categories_to_include'));
+
                 // segundo loop para mostrar os posts
                 $args = array(
                   'post_type' => 'post',
-                  'posts_per_page' => 2,
-                  'category__not_in' => array(9),
-                  'category__in' => array(12, 6),
+                  'posts_per_page' => $per_page,
+                  'category__not_in' => $loop2_cat_exclude, // 9
+                  'category__in' =>  $loop2_cat_include, // 12, 6
                   'offset' => 1
                 );
                 $secondary = new WP_Query($args);
@@ -102,13 +114,13 @@
       </div>
     </section>
     <section class="map">
-      <?php 
+      <?php
       // chamando o mapa do google
-      // url
-      $address = urlencode(get_theme_mod('set_map_address'));
+      // urlencode() - codifica uma string para uma URL.
+      $address = get_theme_mod('set_map_address');
 
       ?>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.743736575156!2d-43.762134599999996!3d-22.869588899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bf85fddabb273%3A0xe6d95ed3de1c03a!2sHotel%20Europa%20de%20Itaguai%20LTDA.!5e0!3m2!1spt-BR!2sbr!4v1648596005699!5m2!1spt-BR!2sbr&zoom=15" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="<?php echo $address ?>" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 </div>
